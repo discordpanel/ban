@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord User Ban</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+
+        .fullscreen-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cdn.discordapp.com/attachments/1317260634085396514/1324823508756467793/LqIk9lBaHR0cHM6Ly9vY2RuLmV1L3B1bHNjbXMvTURBXy81ZjFlZjU5YjY4MGJhMjNiYTY0MzlhY2RjMDZjNTM1Yy5wbmeSlQMAAM0HgM0EOJMFzQSwzQJ23gACoTAHoTEE.png?ex=67798d8a&is=67783c0a&hm=d58ed82ecf75481fca89fc955f6aab046fa60af4a05aab231c29510e96d33ee7&'); /* Remplacez par votre lien */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: white;
+            text-shadow: 0 0 5px black;
+        }
+
+        .input-group {
+            margin: 10px 0;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e60000;
+        }
+    </style>
+    <script>
+        function banUser() {
+            const userId = document.getElementById('discord-id').value;
+            if (!userId) {
+                alert('Veuillez entrer un ID Discord valide.');
+                return;
+            }
+
+            // Exemple d'action (à remplacer par une logique réelle de ban)
+            alert(`Utilisateur avec l'ID ${userId} a été banni (simulation).`);
+        }
+    </script>
+</head>
+<body>
+    <div class="fullscreen-image"></div>
+    <div class="content">
+        <h1>Ban User on Discord</h1>
+        <div class="input-group">
+            <input type="text" id="discord-id" placeholder="Entrez l'ID Discord">
+        </div>
+        <button onclick="banUser()">Bannir l'utilisateur</button>
+    </div>
+</body>
+</html>
